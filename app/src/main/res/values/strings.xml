@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">RUCafeApp</string>
+    <string name="order_details_activity">Your Order</string>
+    <string name="order_coffee_activity">Order Coffee</string>
+    <string name="order_donut_activity">Order Donuts</string>
+    <string name="store_orders_activity">Store Orders</string>
+    <string name="add_to_order_donut">Add to Order</string>
+    <string name="add_to_order_coffee">Add to Order</string>
+    <string name="milk">milk</string>
+    <string name="caramel">caramel</string>
+    <string name="cream">cream</string>
+    <string name="subtotal_coffee">subtotal</string>
+    <string name="select_quantity_donut">Select quantity</string>
+    <string name="select_donut_flavor">Select Donut Flavor</string>
+    <string name="subtotal_donut">subtotal</string>
+    <string name="order_coffee_button">Order Coffee</string>
+    <string-array name="quantity">"1", "2", "3", "4", "5"</string-array>
 </resources>

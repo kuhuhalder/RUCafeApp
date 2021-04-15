@@ -9,10 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RUCafeApp">
-        <activity android:name=".StoreOrdersActivity"></activity>
-        <activity android:name=".OrderDetails" />
-        <activity android:name=".OrderingCoffee" />
-        <activity android:name=".OrderingDonuts" />
+        <activity android:name=".StoreOrdersActivity"
+            android:label = "@string/store_orders_activity"
+            android:parentActivityName = ".MainActivity">
+        </activity>
+        <activity android:name=".OrderDetailsActivity"
+            android:label = "@string/order_details_activity"
+            android:parentActivityName = ".MainActivity">
+        </activity>
+        <activity android:name=".OrderingCoffeeActivity"
+            android:label = "@string/order_coffee_activity"
+            android:parentActivityName = ".MainActivity">
+        </activity>
+        <activity android:name=".OrderingDonutsActivity"
+            android:label = "@string/order_donut_activity"
+            android:parentActivityName = ".MainActivity">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

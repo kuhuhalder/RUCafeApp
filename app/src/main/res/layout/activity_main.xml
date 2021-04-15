@@ -4,4 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="289dp"
+        android:layout_height="329dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/order_coffee_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coffee2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
