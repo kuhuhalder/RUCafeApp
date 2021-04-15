@@ -13,47 +13,20 @@ public class Donut extends MenuItem
      */
     private String flavor;
     /**
-     * instance variable to store flavor of type
+     * final constant to store price
      */
-    private String type;
-    /**
-     * final constant to store yeast donut
-     */
-    private static final double YEASTDONUT = 1.39;
-    /**
-     * final constant to store cake donut
-     */
-    private static final double CAKEDONUT = 1.59;
-    /**
-     * final constant to store donut hole
-     */
-    private static final double DONUTHOLE = 0.33;
+    private static final double PRICE = 1.39;
 
     /**
      * This is the parametrized constructor to create a donut object
      *
-     * @param type     string for the type of donut
      * @param flavor   string for the flavor of donut
      * @param quantity int for the quantity of donut
      */
-    public Donut(String type, String flavor, int quantity)
+    public Donut(String flavor, int quantity)
     {
         super(quantity);
         this.flavor = flavor;
-        this.type = type;
-        if (type.equals("yeast donuts"))
-        {
-            price = YEASTDONUT;
-        }
-        else if (type.equals("cake donuts"))
-        {
-            price = CAKEDONUT;
-        }
-        else if (type.equals("donut holes"))
-        {
-            price = DONUTHOLE;
-        }
-
     }
 
     /**
@@ -62,21 +35,7 @@ public class Donut extends MenuItem
     @Override
     public void itemPrice()
     {
-        if (type.equals("yeast donuts"))
-        {
-            price = YEASTDONUT;
-        }
-        else if (type.equals("cake donuts"))
-        {
-            price = CAKEDONUT;
-        }
-        else if (type.equals("donut holes"))
-        {
-            price = DONUTHOLE;
-        }
-        else
-            price = 0;
-        price = price * quantity;
+        price = PRICE * quantity;
     }
 
     /**

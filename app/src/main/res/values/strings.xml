@@ -18,5 +18,36 @@
     <string name="current_order">Current Order</string>
     <string name="welcome_to_ru_cafe">Welcome to RU Cafe!</string>
     <string name="todo">TODO</string>
-    <string-array name="quantity">"1", "2", "3", "4", "5"</string-array>
+    <string name="syrup">syrup</string>
+    <string name="whipped_cream">whipped cream</string>
+    <string name="sales_tax_your_orders">sales tax</string>
+    <string name="your_order">Your Order</string>
+    <string name="place_the_order">Place the Order</string>
+    <string name="total">total</string>
+    <string name="image_view_your_order">TODO</string>
+    <string name="subtotal_your_order">subtotal</string>
+    <string name="store_orders_image_view">store orders image view</string>
+    <string name="store_orders_text">Store Orders</string>
+    <string name="coffee_image_view">coffee image view</string>
+    <string name="donuts_image_view">donuts image view</string>
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="coffee_size">
+        <item>Short</item>
+        <item>Tall</item>
+        <item>Grande</item>
+        <item>Venti</item>
+    </string-array>
+    <string-array name="donut_flavor">
+        <item>jelly</item>
+        <item>blueberry</item>
+        <item>chocolate-frosted</item>
+        <item>strawberry-frosted</item>
+        <item>Glazed</item>
+    </string-array>
 </resources>

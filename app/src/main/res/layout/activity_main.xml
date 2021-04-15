@@ -13,6 +13,7 @@
         android:layout_marginTop="56dp"
         android:contentDescription="@string/order_coffee_button"
         android:foregroundGravity="center_horizontal"
+        android:onClick="launchOrderDonuts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,12 +25,13 @@
         android:layout_width="204dp"
         android:layout_height="179dp"
         android:layout_marginTop="40dp"
+        android:contentDescription="@string/todo"
+        android:onClick="launchOrderCoffee"
         app:layout_constraintEnd_toEndOf="@+id/MainDonutsImage"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/MainDonutsImage"
         app:layout_constraintTop_toBottomOf="@+id/MainDonutsImage"
-        app:srcCompat="@drawable/coffee"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/coffee" />
 
     <Button
         android:id="@+id/CurrentOrderMainButton"
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="52dp"
+        android:onClick="launchYourOrder"
         android:text="@string/current_order"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MainCoffeeImage" />
@@ -45,10 +48,12 @@
         android:id="@+id/StoreOrdersMainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:onClick="launchStoreOrders"
         android:text="@string/store_orders"
         app:layout_constraintStart_toEndOf="@+id/CurrentOrderMainButton"
-        app:layout_constraintTop_toTopOf="@+id/CurrentOrderMainButton" />
+        app:layout_constraintTop_toBottomOf="@+id/MainCoffeeImage" />
 
     <TextView
         android:id="@+id/textView5"
