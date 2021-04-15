@@ -14,5 +14,9 @@
     <string name="select_donut_flavor">Select Donut Flavor</string>
     <string name="subtotal_donut">subtotal</string>
     <string name="order_coffee_button">Order Coffee</string>
+    <string name="store_orders">Store Orders</string>
+    <string name="current_order">Current Order</string>
+    <string name="welcome_to_ru_cafe">Welcome to RU Cafe!</string>
+    <string name="todo">TODO</string>
     <string-array name="quantity">"1", "2", "3", "4", "5"</string-array>
 </resources>

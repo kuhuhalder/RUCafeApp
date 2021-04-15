@@ -7,15 +7,59 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="289dp"
-        android:layout_height="329dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="80dp"
+        android:id="@+id/MainDonutsImage"
+        android:layout_width="205dp"
+        android:layout_height="187dp"
+        android:layout_marginTop="56dp"
         android:contentDescription="@string/order_coffee_button"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/coffee2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/donuts" />
+
+    <ImageButton
+        android:id="@+id/MainCoffeeImage"
+        android:layout_width="204dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/MainDonutsImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/MainDonutsImage"
+        app:layout_constraintTop_toBottomOf="@+id/MainDonutsImage"
+        app:srcCompat="@drawable/coffee"
+        android:contentDescription="@string/todo" />
+
+    <Button
+        android:id="@+id/CurrentOrderMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/current_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainCoffeeImage" />
+
+    <Button
+        android:id="@+id/StoreOrdersMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="@string/store_orders"
+        app:layout_constraintStart_toEndOf="@+id/CurrentOrderMainButton"
+        app:layout_constraintTop_toTopOf="@+id/CurrentOrderMainButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/welcome_to_ru_cafe"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
