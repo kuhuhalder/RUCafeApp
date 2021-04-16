@@ -19,8 +19,8 @@
             android:id="@+id/salestax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:hint="@string/sales_tax_your_orders" />
+            android:hint="@string/sales_tax_your_orders"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -77,8 +77,8 @@
             android:id="@+id/subtotal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:editable="false"
-            android:hint="@string/subtotal_your_order" />
+            android:hint="@string/subtotal_your_order"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -94,8 +94,8 @@
             android:id="@+id/total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:hint="@string/total" />
+            android:hint="@string/total"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

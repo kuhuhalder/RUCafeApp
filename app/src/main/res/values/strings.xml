@@ -30,6 +30,8 @@
     <string name="store_orders_text">Store Orders</string>
     <string name="coffee_image_view">coffee image view</string>
     <string name="donuts_image_view">donuts image view</string>
+    <string name="coffee_added_to_order">Coffee added to order</string>
+    <string name="donut_added_to_order">Donut added to order</string>
     <string-array name="quantity">
         <item>1</item>
         <item>2</item>
@@ -48,6 +50,7 @@
         <item>blueberry</item>
         <item>chocolate-frosted</item>
         <item>strawberry-frosted</item>
-        <item>Glazed</item>
+        <item>glazed</item>
+        <item>jelly holes</item>
     </string-array>
 </resources>

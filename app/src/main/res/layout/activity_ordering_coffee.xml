@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="236dp"
+        android:onClick="setSubtotal"
         android:text="@string/cream"
         app:layout_constraintStart_toEndOf="@+id/milkCheckbox"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="236dp"
+        android:onClick="setSubtotal"
         android:text="@string/syrup"
         app:layout_constraintStart_toEndOf="@+id/creamCheckbox"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +43,7 @@
         android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="setSubtotal"
         android:text="@string/whipped_cream"
         app:layout_constraintEnd_toEndOf="@+id/creamCheckbox"
         app:layout_constraintStart_toStartOf="@+id/creamCheckbox"
@@ -53,9 +56,9 @@
         android:layout_marginTop="32dp"
         android:onClick="addToOrder"
         android:text="@string/add_to_order_coffee"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintEnd_toEndOf="@+id/subtotalCoffeeLayout"
+        app:layout_constraintStart_toStartOf="@+id/subtotalCoffeeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/subtotalCoffeeLayout" />
 
     <CheckBox
         android:id="@+id/milkCheckbox"
@@ -63,6 +66,7 @@
         android:layout_height="51dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="236dp"
+        android:onClick="setSubtotal"
         android:text="@string/milk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +76,7 @@
         android:layout_width="91dp"
         android:layout_height="49dp"
         android:layout_marginTop="24dp"
+        android:onClick="setSubtotal"
         android:text="@string/caramel"
         app:layout_constraintEnd_toEndOf="@+id/milkCheckbox"
         app:layout_constraintStart_toStartOf="@+id/milkCheckbox"
@@ -89,7 +94,7 @@
         app:srcCompat="@drawable/coffee2" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/subtotalCoffeeLayout"
         android:layout_width="278dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
@@ -101,8 +106,8 @@
             android:id="@+id/subtotalCoffee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:hint="@string/subtotal_coffee" />
+            android:hint="@string/subtotal_coffee"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
