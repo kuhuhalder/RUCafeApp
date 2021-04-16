@@ -21,13 +21,12 @@
         android:id="@+id/addToOrderDonut"
         android:layout_width="232dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:onClick="addToOrder"
         android:text="@string/add_to_order_donut"
-        app:layout_constraintEnd_toEndOf="@+id/subtotalDonut"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="@+id/subtotalDonut"
-        app:layout_constraintTop_toBottomOf="@+id/subtotalDonut" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
     <Spinner
         android:id="@+id/donutQuantitySpinner"
@@ -60,17 +59,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donutFlavorSpinner" />
 
-    <TextView
-        android:id="@+id/subtotalDonut"
-        android:layout_width="261dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/subtotal_donut"
-        app:layout_constraintEnd_toEndOf="@+id/donutQuantitySpinner"
-        app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="@+id/donutQuantitySpinner"
-        app:layout_constraintTop_toBottomOf="@+id/donutQuantitySpinner" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="195dp"
@@ -81,4 +69,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/donuts4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="300dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/donutQuantitySpinner"
+        app:layout_constraintStart_toStartOf="@+id/donutQuantitySpinner"
+        app:layout_constraintTop_toBottomOf="@+id/donutQuantitySpinner">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subtotalDonut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:hint="@string/subtotal_donut" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
