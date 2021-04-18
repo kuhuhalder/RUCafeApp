@@ -8,8 +8,8 @@
 
     <ListView
         android:id="@+id/storeOrdersListView"
-        android:layout_width="379dp"
-        android:layout_height="417dp"
+        android:layout_width="376dp"
+        android:layout_height="320dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,4 +36,30 @@
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/storeorders" />
+
+    <Button
+        android:id="@+id/DeleteOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="deleteStoreOrder"
+        android:text="@string/delete_order"
+        app:layout_constraintEnd_toEndOf="@+id/StoreOrderTotalText"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="@+id/StoreOrderTotalText"
+        app:layout_constraintTop_toBottomOf="@+id/StoreOrderTotalText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/StoreOrderTotalText"
+        android:layout_width="178dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="44dp"
+        android:hint="@string/ordertotal"
+        app:layout_constraintEnd_toEndOf="@+id/storeOrdersListView"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/storeOrdersListView"
+        app:layout_constraintTop_toBottomOf="@+id/storeOrdersListView">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

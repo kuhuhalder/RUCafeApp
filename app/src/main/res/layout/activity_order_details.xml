@@ -7,13 +7,13 @@
     tools:context=".OrderDetailsActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/OrderSalesTax"
         android:layout_width="308dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintEnd_toEndOf="@+id/OrderSubtotal"
+        app:layout_constraintStart_toStartOf="@+id/OrderSubtotal"
+        app:layout_constraintTop_toBottomOf="@+id/OrderSubtotal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/salestax"
@@ -59,13 +59,14 @@
         android:layout_width="265dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
+        android:onClick="placeOrder"
         android:text="@string/place_the_order"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+        app:layout_constraintEnd_toEndOf="@+id/OrderTotal"
+        app:layout_constraintStart_toStartOf="@+id/OrderTotal"
+        app:layout_constraintTop_toBottomOf="@+id/OrderTotal" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/OrderSubtotal"
         android:layout_width="312dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
@@ -82,13 +83,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/OrderTotal"
         android:layout_width="306dp"
         android:layout_height="61dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+        app:layout_constraintEnd_toEndOf="@+id/OrderSalesTax"
+        app:layout_constraintStart_toStartOf="@+id/OrderSalesTax"
+        app:layout_constraintTop_toBottomOf="@+id/OrderSalesTax">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/total"

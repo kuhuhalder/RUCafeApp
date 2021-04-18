@@ -32,6 +32,9 @@
     <string name="donuts_image_view">donuts image view</string>
     <string name="coffee_added_to_order">Coffee added to order</string>
     <string name="donut_added_to_order">Donut added to order</string>
+    <string name="order_has_been_placed">Order has been placed</string>
+    <string name="delete_order">Delete Order</string>
+    <string name="ordertotal">OrderTotal</string>
     <string-array name="quantity">
         <item>1</item>
         <item>2</item>
