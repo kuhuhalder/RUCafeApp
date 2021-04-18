@@ -15,9 +15,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
+ * This method is for the Store Orders screen and takes care of the user actions on that screen.
  *
+ * @author Dhvani Kakabalia
+ * @author Kuhu Halder
  */
-public class StoreOrdersActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class StoreOrdersActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView ordersDisplay;
     private StoreOrders store = MainActivity.store;
@@ -26,13 +29,13 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_orders);
+        this.setTitle(R.string.store_orders_activity);
         ordersDisplay = findViewById(R.id.storeOrdersListView);
         ordersDisplay.setOnItemClickListener(this);
 
         ArrayList<Order> orders = store.getOrders();
-        ArrayList <String> list = new ArrayList<>();
-        for(int i=0;i<orders.size();i++)
-        {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < orders.size(); i++) {
             list.add(orders.get(i).toString());
         }
 
@@ -42,34 +45,34 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
 
 
     /**
-     * @param parent
-     * @param view
-     * @param position
-     * @param id
+     * This gets the order that has been selected and deletes it if the user confirms
+     * @param parent   the entire view
+     * @param view     the list view
+     * @param position of selected object in the view list
+     * @param id       of the list
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         ArrayList<Order> orders = store.getOrders();
-        ArrayList <String> list = new ArrayList<>();
-        for(int i=0;i<orders.size();i++)
-        {
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < orders.size(); i++) {
             list.add(orders.get(i).toString());
         }
         ArrayAdapter<String> ordersList = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
         ordersDisplay.setAdapter(ordersList);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Remove Item");
-        alert.setMessage("Order to be removed?");
-        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        alert.setTitle(R.string.alert_title_order);
+        alert.setMessage(R.string.alert_message_order);
+        alert.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             /**
-             * @param dialog
-             * @param which
+             * @param dialog of the alert
+             * @param which index of the list view item selected
              */
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 list.remove(position);
-               store.remove(store.getOrders().get(position));
+                store.remove(store.getOrders().get(position));
                 ordersList.notifyDataSetChanged();
 
                 Context context = getApplicationContext();
@@ -79,7 +82,7 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
                 toast.show();
 
             }
-        }).setNegativeButton("No", null);
+        }).setNegativeButton(R.string.no, null);
         AlertDialog dialog = alert.create();
         dialog.show();
 

@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
 /**
- * 
+ * This class is an activity class to accompany the order donut layout and handles the functionalities associated with it
+ * @author Dhvani Kakabalia
+ * @author Kuhu Halder
  */
 public class OrderingDonutsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private Spinner donutFlavor, donutQuantity;
@@ -25,6 +26,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_donuts);
+        this.setTitle(R.string.order_donut_activity);
         donutFlavor = findViewById(R.id.donutFlavorSpinner);
         donutQuantity = findViewById(R.id.donutQuantitySpinner);
         subtotal = findViewById(R.id.subtotalDonut);
@@ -35,7 +37,8 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
     }
 
     /**
-     * @param view 
+     * This function is a listener to add to order button and adds donuts to orders
+     * @param view the current view of the button
      */
     public void addToOrder(View view)
     {
@@ -48,7 +51,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
         order.add(donut);
 
         Context context = getApplicationContext();
-        CharSequence text = getString(R.string.donut_added_to_order);; // hardcoded text
+        CharSequence text = getString(R.string.donut_added_to_order);
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
@@ -60,10 +63,11 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
 
 
     /**
-     * @param parent 
-     * @param view
-     * @param position
-     * @param id
+     * This method is an on item selected s
+     * @param parent the parent view 
+     * @param view the current view - in this case, the spinner class
+     * @param position the position/ index of the selected item in spinner
+     * @param id the id of the associated spinner
      */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -75,7 +79,8 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
     }
 
     /**
-     * @param parent 
+     * This method is to handle when nothing is selected in the spinner
+     * @param parent the parent view
      */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

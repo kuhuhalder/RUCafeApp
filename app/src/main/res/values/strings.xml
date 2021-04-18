@@ -37,6 +37,12 @@
     <string name="delete_order">Order Deleted</string>
     <string name="add_menuitems">Add some items to cart before placing order</string>
     <string name="ordertotal">OrderTotal</string>
+    <string name="alert_title_item">Remove Item</string>
+    <string name="alert_message_item">Item to be Removed?</string>
+    <string name="alert_title_order">Remove Order</string>
+    <string name="alert_message_order">Order to be removed?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string-array name="quantity">
         <item>1</item>
         <item>2</item>

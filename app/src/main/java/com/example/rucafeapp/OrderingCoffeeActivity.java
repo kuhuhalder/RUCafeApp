@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 
 /**
- *
+ * This method is for the Ordering Coffee Activity screen and takes care of the user actions on that screen.
  * @author Dhvani Kakabalia
  * @author Kuhu Halder
  */
@@ -30,6 +30,7 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_coffee);
+        this.setTitle(R.string.order_coffee_activity);
         size = findViewById(R.id.sizeSpinner);
         size.setOnItemSelectedListener(this);
         milk = findViewById(R.id.milkCheckbox);
@@ -87,27 +88,27 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
 
     /**
      * This gets the size of the Coffee you want to order and sets it to the coffee object
-     * @param parent
+     * @param parent the entire view
      * @param view the list view
-     * @param position of selected object in the view
-     * @param id
+     * @param position of selected object in the view list
+     * @param id of the list
      */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//        String selectedSize = size.getSelectedItem().toString();
-//        MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         setSubtotal(view);
     }
 
     /**
-     * @param parent
+    * Method for if nothing is selected in the list view
+     * @param parent the entire view
      */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
     /**
-     * @param view
+     * sets the Subtotal text view box to the price of the coffee
+     * @param view the current view
      */
     public void setSubtotal(View view) {
         String selectedSize = size.getSelectedItem().toString();
