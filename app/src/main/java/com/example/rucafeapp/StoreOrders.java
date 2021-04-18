@@ -78,4 +78,15 @@ public class StoreOrders implements Customizable
     {
         return orders.size();
     }
+
+    @Override
+    public String toString()
+    {
+        String str = "";
+        for(int i=0;i<orders.size();i++)
+        {
+            str = orders.get(i).toString()+"\n"+orders.get(i).getTotal();
+        }
+        return str;
+    }
 }

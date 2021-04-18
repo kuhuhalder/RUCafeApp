@@ -44,22 +44,24 @@
         android:layout_marginTop="32dp"
         android:onClick="deleteStoreOrder"
         android:text="@string/delete_order"
-        app:layout_constraintEnd_toEndOf="@+id/StoreOrderTotalText"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="@+id/StoreOrderTotalText"
-        app:layout_constraintTop_toBottomOf="@+id/StoreOrderTotalText" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/StoreOrderTotalText"
-        android:layout_width="178dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="44dp"
-        android:hint="@string/ordertotal"
+        android:id="@+id/textInputLayout"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="@+id/storeOrdersListView"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/storeOrdersListView"
         app:layout_constraintTop_toBottomOf="@+id/storeOrdersListView">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ordertotal" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

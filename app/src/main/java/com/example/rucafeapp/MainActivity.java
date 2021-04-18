@@ -11,8 +11,8 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
     private ImageButton launchDonuts, launchCoffeee;
     private Button currentOrderButton, storeOrdersButton;
-    protected static Order order;
-    protected static StoreOrders store;
+    protected static Order order = new Order();;
+    protected static StoreOrders store = new StoreOrders();;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
         launchCoffeee = findViewById(R.id.MainCoffeeImage);
         currentOrderButton = findViewById(R.id.CurrentOrderMainButton);
         storeOrdersButton = findViewById(R.id.StoreOrdersMainButton);
-        order = new Order();
-        store = new StoreOrders();
     }
 
     public void launchOrderDonuts(View view)
