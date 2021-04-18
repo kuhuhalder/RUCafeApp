@@ -12,14 +12,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
-
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class StoreOrdersActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private ListView ordersDisplay;
-    private TextInputEditText orderTotal;
     private StoreOrders store = MainActivity.store;
 
     @Override
@@ -27,9 +27,7 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_orders);
         ordersDisplay = findViewById(R.id.storeOrdersListView);
-        orderTotal = findViewById(R.id.orderTotal);
         ordersDisplay.setOnItemClickListener(this);
-        orderTotal.setEnabled(false);
 
         ArrayList<Order> orders = store.getOrders();
         ArrayList <String> list = new ArrayList<>();
@@ -42,10 +40,13 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
         ordersDisplay.setAdapter(ordersList);
     }
 
-    public void deleteStoreOrder(View view) {
 
-    }
-
+    /**
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -61,6 +62,10 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
         alert.setTitle("Remove Item");
         alert.setMessage("Order to be removed?");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            /**
+             * @param dialog
+             * @param which
+             */
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 list.remove(position);

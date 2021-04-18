@@ -34,7 +34,7 @@
     <string name="donut_added_to_order">Donut added to order</string>
     <string name="order_has_been_placed">Order has been placed</string>
     <string name="item_removed">Item removed from cart</string>
-    <string name="delete_order">Delete Order</string>
+    <string name="delete_order">Order Deleted</string>
     <string name="add_menuitems">Add some items to cart before placing order</string>
     <string name="ordertotal">OrderTotal</string>
     <string-array name="quantity">

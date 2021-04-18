@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,10 +13,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * This class
+ */
 public class OrderDetailsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView orderList;
@@ -56,10 +55,11 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
 
     }
 
+    /**
+     * This method is to handle the place order functionalities of the your order screen
+     * @param view the current view of the screen - the button accompanying the place order
+     */
     public void placeOrder(View view) {
-//        Intent intent = new Intent(this, MainActivity.class);
-//        intent.putExtra("submittedOrder", (Parcelable) order);
-//        startActivity(intent);
 
         ArrayList<MenuItem> menuItems = order.getMenuItem();
         if(menuItems.size() == 0)
@@ -95,6 +95,13 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
         toast.show();
     }
 
+    /**
+     * This class is an on item click listener for the list view
+     * @param parent the adapt
+     * @param view the list view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ArrayList<MenuItem> menuItems = order.getMenuItem();
@@ -109,11 +116,15 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
         alert.setTitle("Remove Item");
         alert.setMessage("Item to be removed?");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            /**
+             * @param dialog
+             * @param which
+             */
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 list.remove(position);
                 order.remove(order.getMenuItem().get(position));
-               menuItemsList.notifyDataSetChanged();
+                menuItemsList.notifyDataSetChanged();
 
                 order.calculateSubtotal();
                 subtotal.setText(String.format("%,.2f", order.getSubTotal()));

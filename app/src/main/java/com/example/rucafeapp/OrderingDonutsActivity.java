@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+/**
+ * 
+ */
 public class OrderingDonutsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private Spinner donutFlavor, donutQuantity;
     private TextInputEditText subtotal;
@@ -31,6 +34,9 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
         donutQuantity.setOnItemSelectedListener(this);
     }
 
+    /**
+     * @param view 
+     */
     public void addToOrder(View view)
     {
         String selectedFlavor = donutFlavor.getSelectedItem().toString();
@@ -53,6 +59,12 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
     }
 
 
+    /**
+     * @param parent 
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String selectedFlavor = donutFlavor.getSelectedItem().toString();
@@ -62,6 +74,9 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
         subtotal.setText(String.format("%,.2f", donut.getPrice()));
     }
 
+    /**
+     * @param parent 
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

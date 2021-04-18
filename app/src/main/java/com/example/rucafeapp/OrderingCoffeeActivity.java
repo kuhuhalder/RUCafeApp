@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+/**
+ *
+ * @author Dhvani Kakabalia
+ * @author Kuhu Halder
+ */
 public class OrderingCoffeeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Spinner size;
@@ -37,8 +42,12 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         subtotal.setText(SHORT_BLACK);
     }
 
-    public void addToOrder(View view) {
 
+    /**
+     * This method adds a Coffee to the current Order
+     * @param view The current view
+     */
+    public void addToOrder(View view) {
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         if (milk.isChecked())
@@ -76,6 +85,13 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
     }
 
 
+    /**
+     * This gets the size of the Coffee you want to order and sets it to the coffee object
+     * @param parent
+     * @param view the list view
+     * @param position of selected object in the view
+     * @param id
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 //        String selectedSize = size.getSelectedItem().toString();
@@ -83,10 +99,16 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         setSubtotal(view);
     }
 
+    /**
+     * @param parent
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
+    /**
+     * @param view
+     */
     public void setSubtotal(View view) {
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
