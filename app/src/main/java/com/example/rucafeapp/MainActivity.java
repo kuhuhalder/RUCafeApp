@@ -14,9 +14,22 @@ import android.widget.ImageButton;
  * @author Kuhu Halder
  */
 public class MainActivity extends AppCompatActivity {
+
+    /**
+     * The ImageButtons that lead to the order item menu for that specific item type
+     */
     private ImageButton launchDonuts, launchCoffeee;
+    /**
+     * The Buttons that lead to the the current order or store order pages
+     */
     private Button currentOrderButton, storeOrdersButton;
+    /**
+     * The Order object that holds the current menu items in the order
+     */
     protected static Order order = new Order();
+    /**
+     * The StoreOrders object that holds all of the orders in for the RUCafe App
+     */
     protected static StoreOrders store = new StoreOrders();
 
     @Override
