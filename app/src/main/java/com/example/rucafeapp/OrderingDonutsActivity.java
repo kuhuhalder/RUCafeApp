@@ -17,9 +17,21 @@ import com.google.android.material.textfield.TextInputEditText;
  * @author Kuhu Halder
  */
 public class OrderingDonutsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+    /**
+     * Spinners to choose the donut flavor and quantity
+     */
     private Spinner donutFlavor, donutQuantity;
+    /**
+     * The Text View field for the subtotal of the coffee
+     */
     private TextInputEditText subtotal;
+    /**
+     * The Order object that holds the current menu items in the order
+     */
     private Order order = MainActivity.order;
+    /**
+     * Price for one donut of any kind
+     */
     private static final String DONUT_PRICE = "1.39";
 
     @Override

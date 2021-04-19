@@ -22,9 +22,21 @@ import java.util.ArrayList;
  */
 public class OrderDetailsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
+    /**
+     * the list view that displays the menu items in the current order
+     */
     private ListView orderList;
+    /**
+     * The Text View fields in the current order activity screen
+     */
     private TextInputEditText subtotal, tax, total;
+    /**
+     * The Order object that holds the current menu items in the order
+     */
     private Order order = MainActivity.order;
+    /**
+     * The StoreOrders object that holds all of the orders in for the RUCafe App
+     */
     private StoreOrders store = MainActivity.store;
 
     @Override

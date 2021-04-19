@@ -22,7 +22,13 @@ import java.util.ArrayList;
  */
 public class StoreOrdersActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
+    /**
+     * the list view that displays all of the orders submitted to the store
+     */
     private ListView ordersDisplay;
+    /**
+     * The StoreOrders object that holds all of the orders in for the RUCafe App
+     */
     private StoreOrders store = MainActivity.store;
 
     @Override

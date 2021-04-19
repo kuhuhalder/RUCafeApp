@@ -19,11 +19,30 @@ import com.google.android.material.textfield.TextInputEditText;
  */
 public class OrderingCoffeeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+
+    /**
+     * Spinner to choose the coffee size
+     */
     private Spinner size;
+    /**
+     * The checkboxes for the coffee add-ins
+     */
     private CheckBox milk, caramel, syrup, whippedcream, cream;
+    /**
+     * The Text View field for the subtotal of the coffee
+     */
     private TextInputEditText subtotal;
+    /**
+     * The quantity of the coffee that is currently being ordered
+     */
     private static final int QUANTITY = 1;
+    /**
+     * The Order object that holds the current menu items in the order
+     */
     private Order order = MainActivity.order;
+    /**
+     * Price for a plain short black coffee
+     */
     private static final String SHORT_BLACK = "1.99";
 
     @Override
