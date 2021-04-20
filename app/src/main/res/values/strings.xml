@@ -43,6 +43,7 @@
     <string name="alert_message_order">Order to be removed?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="Short_Black_Price">1.99</string>
     <string-array name="quantity">
         <item>1</item>
         <item>2</item>

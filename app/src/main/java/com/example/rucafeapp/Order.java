@@ -108,13 +108,13 @@ public class Order implements Customizable
     @Override
     public String toString()
     {
-        String output = "";
+        String output = this.orderID + "\n";
         for (int i = 0; i < menuItems.size(); i++)
         {
             output = output + menuItems.get(i).toString() + "\n";
         }
 
-        return output + "Order SubTotal:" + String.format("%,.2f", this.getSubTotal()) + "\n"+ "Order Sales Tax:" + String.format("%,.2f", this.getSalestax()) + "\n"+ "Order Total:" + String.format("%,.2f", this.getTotal()) + "\n";
+        return output + "Order SubTotal: $" + String.format("%,.2f", this.getSubTotal()) + "\n"+ "Order Sales Tax: $" + String.format("%,.2f", this.getSalestax()) + "\n"+ "Order Total: $" + String.format("%,.2f", this.getTotal()) + "\n";
     }
 
     /**

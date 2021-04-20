@@ -40,10 +40,7 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
      * The Order object that holds the current menu items in the order
      */
     private Order order = MainActivity.order;
-    /**
-     * Price for a plain short black coffee
-     */
-    private static final String SHORT_BLACK = "1.99";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +56,7 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         cream = findViewById(R.id.creamCheckbox);
         subtotal = findViewById(R.id.subtotalCoffee);
         subtotal.setEnabled(false);
-        subtotal.setText(SHORT_BLACK);
+        subtotal.setText(R.string.Short_Black_Price);
     }
 
 
@@ -84,7 +81,7 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         subtotal.setText(String.format("%,.2f", coffee.getPrice()));
         order.add(coffee);
 
-        subtotal.setText(SHORT_BLACK);
+        subtotal.setText(R.string.Short_Black_Price);
         size.setSelection(0);
         if (milk.isChecked())
             milk.setChecked(false);
