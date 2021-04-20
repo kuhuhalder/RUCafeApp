@@ -29,10 +29,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
      * The Order object that holds the current menu items in the order
      */
     private Order order = MainActivity.order;
-    /**
-     * Price for one donut of any kind
-     */
-    private static final String DONUT_PRICE = "1.39";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +40,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
         donutQuantity = findViewById(R.id.donutQuantitySpinner);
         subtotal = findViewById(R.id.subtotalDonut);
         subtotal.setEnabled(false);
-        subtotal.setText(DONUT_PRICE);
+        subtotal.setText(R.string.Donut_Price);
         donutFlavor.setOnItemSelectedListener(this);
         donutQuantity.setOnItemSelectedListener(this);
     }
@@ -70,7 +67,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
 
         donutFlavor.setSelection(0);
         donutQuantity.setSelection(0);
-        subtotal.setText(DONUT_PRICE);
+        subtotal.setText(R.string.Donut_Price);
     }
 
 
