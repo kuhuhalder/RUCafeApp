@@ -108,7 +108,7 @@ public class Order implements Customizable
     @Override
     public String toString()
     {
-        String output = this.orderID + "\n";
+        String output = "Order #" + this.orderID + "\n";
         for (int i = 0; i < menuItems.size(); i++)
         {
             output = output + menuItems.get(i).toString() + "\n";

@@ -45,6 +45,11 @@
     <string name="no">No</string>
     <string name="Short_Black_Price">1.99</string>
     <string name="Donut_Price">1.39</string>
+    <string name="order_donuts">Order Donuts</string>
+    <string name="order_coffee">Order Coffee</string>
+    <string name="click_on_item_to_remove">Click on item to remove</string>
+    <string name="click_on_order_to_remove">Click on order to remove</string>
+
     <string-array name="quantity">
         <item>1</item>
         <item>2</item>

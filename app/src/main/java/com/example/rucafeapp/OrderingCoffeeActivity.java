@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 /**
  * This method is for the Ordering Coffee Activity screen and takes care of the user actions on that screen.
+ *
  * @author Dhvani Kakabalia
  * @author Kuhu Halder
  */
@@ -62,21 +63,22 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
 
     /**
      * This method adds a Coffee to the current Order
+     *
      * @param view The current view
      */
     public void addToOrder(View view) {
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         if (milk.isChecked())
-            ((Coffee) coffee).add(R.string.milk);
+            ((Coffee) coffee).add(getString(R.string.milk));
         if (caramel.isChecked())
-            ((Coffee) coffee).add(R.string.caramel);
+            ((Coffee) coffee).add(getString(R.string.caramel));
         if (syrup.isChecked())
-            ((Coffee) coffee).add(R.string.syrup);
+            ((Coffee) coffee).add(getString(R.string.syrup));
         if (whippedcream.isChecked())
-            ((Coffee) coffee).add(R.string.whipped_cream);
+            ((Coffee) coffee).add(getString(R.string.whipped_cream));
         if (cream.isChecked())
-            ((Coffee) coffee).add(R.string.cream);
+            ((Coffee) coffee).add(getString(R.string.cream));
         coffee.itemPrice();
         subtotal.setText(String.format("%,.2f", coffee.getPrice()));
         order.add(coffee);
@@ -104,10 +106,11 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
 
     /**
      * This gets the size of the Coffee you want to order and sets it to the coffee object
-     * @param parent the entire view
-     * @param view the list view
+     *
+     * @param parent   the entire view
+     * @param view     the list view
      * @param position of selected object in the view list
-     * @param id of the list
+     * @param id       of the list
      */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -115,7 +118,8 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
     }
 
     /**
-    * Method for if nothing is selected in the list view
+     * Method for if nothing is selected in the list view
+     *
      * @param parent the entire view
      */
     @Override
@@ -124,21 +128,22 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
 
     /**
      * sets the Subtotal text view box to the price of the coffee
+     *
      * @param view the current view
      */
     public void setSubtotal(View view) {
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         if (milk.isChecked())
-            ((Coffee) coffee).add(R.string.milk);
+            ((Coffee) coffee).add(getString(R.string.milk));
         if (caramel.isChecked())
-            ((Coffee) coffee).add(R.string.caramel);
+            ((Coffee) coffee).add(getString(R.string.caramel));
         if (syrup.isChecked())
-            ((Coffee) coffee).add(R.string.syrup);
+            ((Coffee) coffee).add(getString(R.string.syrup));
         if (whippedcream.isChecked())
-            ((Coffee) coffee).add(R.string.whipped_cream);
+            ((Coffee) coffee).add(getString(R.string.whipped_cream));
         if (cream.isChecked())
-            ((Coffee) coffee).add(R.string.cream);
+            ((Coffee) coffee).add(getString(R.string.cream));
         coffee.itemPrice();
         subtotal.setText(String.format("%,.2f", coffee.getPrice()));
 
