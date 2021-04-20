@@ -71,15 +71,15 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         if (milk.isChecked())
-            ((Coffee) coffee).add("Milk");
+            ((Coffee) coffee).add(R.string.milk);
         if (caramel.isChecked())
-            ((Coffee) coffee).add("Caramel");
+            ((Coffee) coffee).add(R.string.caramel);
         if (syrup.isChecked())
-            ((Coffee) coffee).add("Syrup");
+            ((Coffee) coffee).add(R.string.syrup);
         if (whippedcream.isChecked())
-            ((Coffee) coffee).add("Whipped Cream");
+            ((Coffee) coffee).add(R.string.whipped_cream);
         if (cream.isChecked())
-            ((Coffee) coffee).add("Cream");
+            ((Coffee) coffee).add(R.string.cream);
         coffee.itemPrice();
         subtotal.setText(String.format("%,.2f", coffee.getPrice()));
         order.add(coffee);
@@ -133,15 +133,15 @@ public class OrderingCoffeeActivity extends AppCompatActivity implements Adapter
         String selectedSize = size.getSelectedItem().toString();
         MenuItem coffee = new Coffee(selectedSize, QUANTITY);
         if (milk.isChecked())
-            ((Coffee) coffee).add("Milk");
+            ((Coffee) coffee).add(R.string.milk);
         if (caramel.isChecked())
-            ((Coffee) coffee).add("Caramel");
+            ((Coffee) coffee).add(R.string.caramel);
         if (syrup.isChecked())
-            ((Coffee) coffee).add("Syrup");
+            ((Coffee) coffee).add(R.string.syrup);
         if (whippedcream.isChecked())
-            ((Coffee) coffee).add("Whipped Cream");
+            ((Coffee) coffee).add(R.string.whipped_cream);
         if (cream.isChecked())
-            ((Coffee) coffee).add("Cream");
+            ((Coffee) coffee).add(R.string.cream);
         coffee.itemPrice();
         subtotal.setText(String.format("%,.2f", coffee.getPrice()));
 

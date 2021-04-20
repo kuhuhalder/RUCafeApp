@@ -114,7 +114,7 @@ public class Order implements Customizable
             output = output + menuItems.get(i).toString() + "\n";
         }
 
-        return output + "Order Total:" + String.format("%,.2f", this.getTotal());
+        return output + "Order SubTotal:" + String.format("%,.2f", this.getSubTotal()) + "\n"+ "Order Sales Tax:" + String.format("%,.2f", this.getSalestax()) + "\n"+ "Order Total:" + String.format("%,.2f", this.getTotal()) + "\n";
     }
 
     /**
