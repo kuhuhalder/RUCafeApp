@@ -13,10 +13,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+
 import java.util.ArrayList;
 
 /**
  * This class is an activity class to accompany the current order/ order details layout and handles the functionalities associated with it
+ *
  * @author Dhvani Kakabalia
  * @author Kuhu Halder
  */
@@ -55,8 +57,7 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
         ArrayList<MenuItem> menuItems = order.getMenuItem();
 
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < menuItems.size(); i++)
-        {
+        for (int i = 0; i < menuItems.size(); i++) {
             list.add(menuItems.get(i).toString());
         }
         ArrayAdapter<String> menuItemsList = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
@@ -72,13 +73,13 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
 
     /**
      * This method is to handle the place order functionalities of the your order screen
+     *
      * @param view the current view of the screen - the button accompanying the place order
      */
     public void placeOrder(View view) {
 
         ArrayList<MenuItem> menuItems = order.getMenuItem();
-        if(menuItems.size() == 0)
-        {
+        if (menuItems.size() == 0) {
             Context context = getApplicationContext();
             CharSequence text = getString(R.string.add_menuitems);
             int duration = Toast.LENGTH_SHORT;
@@ -112,17 +113,17 @@ public class OrderDetailsActivity extends AppCompatActivity implements AdapterVi
 
     /**
      * This class is an on item click listener for the list view and deletes menu items from the current order if the user confirms
-     * @param parent the entire view
-     * @param view the list view
+     *
+     * @param parent   the entire view
+     * @param view     the list view
      * @param position the position or index of the item selected in the list view
-     * @param id the id of the list view
+     * @param id       the id of the list view
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ArrayList<MenuItem> menuItems = order.getMenuItem();
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < menuItems.size(); i++)
-        {
+        for (int i = 0; i < menuItems.size(); i++) {
             list.add(menuItems.get(i).toString());
         }
         ArrayAdapter<String> menuItemsList = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);

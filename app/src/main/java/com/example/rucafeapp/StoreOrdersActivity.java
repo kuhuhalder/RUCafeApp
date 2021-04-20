@@ -52,6 +52,7 @@ public class StoreOrdersActivity extends AppCompatActivity implements AdapterVie
 
     /**
      * This gets the order that has been selected and deletes it if the user confirms
+     *
      * @param parent   the entire view
      * @param view     the list view
      * @param position of selected object in the view list

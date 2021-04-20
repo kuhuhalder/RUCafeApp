@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 /**
  * This class is an activity class to accompany the main activity layout and handles the functionalities associated with it
+ *
  * @author Dhvani Kakabalia
  * @author Kuhu Halder
  */
@@ -44,41 +45,41 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is to launch the order donuts screen
+     *
      * @param view the current view of the image button
      */
-    public void launchOrderDonuts(View view)
-    {
+    public void launchOrderDonuts(View view) {
         Intent intent = new Intent(MainActivity.this, OrderingDonutsActivity.class);
         startActivity(intent);
     }
 
     /**
      * This method is to launch the order coffee screen
+     *
      * @param view the current view of the image button
      */
-    public void launchOrderCoffee(View view)
-    {
+    public void launchOrderCoffee(View view) {
         Intent intent = new Intent(MainActivity.this, OrderingCoffeeActivity.class);
         startActivity(intent);
     }
 
     /**
      * This method is to launch the current/ your order screen
+     *
      * @param view the current view of the image button
      */
-    public void launchYourOrder(View view)
-    {
+    public void launchYourOrder(View view) {
         Intent intent = new Intent(MainActivity.this, OrderDetailsActivity.class);
-       startActivity(intent);
+        startActivity(intent);
 
     }
 
     /**
      * This method is to launch the store orders screen
+     *
      * @param view the current view of the image button
      */
-    public void launchStoreOrders(View view)
-    {
+    public void launchStoreOrders(View view) {
         Intent intent = new Intent(MainActivity.this, StoreOrdersActivity.class);
         startActivity(intent);
     }

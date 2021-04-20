@@ -13,10 +13,11 @@ import com.google.android.material.textfield.TextInputEditText;
 
 /**
  * This class is an activity class to accompany the order donut layout and handles the functionalities associated with it
+ *
  * @author Dhvani Kakabalia
  * @author Kuhu Halder
  */
-public class OrderingDonutsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class OrderingDonutsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     /**
      * Spinners to choose the donut flavor and quantity
      */
@@ -47,10 +48,10 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
 
     /**
      * This function is a listener to add to order button and adds donuts to orders
+     *
      * @param view the current view of the button
      */
-    public void addToOrder(View view)
-    {
+    public void addToOrder(View view) {
         String selectedFlavor = donutFlavor.getSelectedItem().toString();
         int selectedQuantity = Integer.parseInt(String.valueOf(donutQuantity.getSelectedItem()));
         MenuItem donut = new Donut(selectedFlavor, selectedQuantity);
@@ -73,10 +74,11 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
 
     /**
      * This method is an on item selected s
-     * @param parent the parent view 
-     * @param view the current view - in this case, the spinner class
+     *
+     * @param parent   the parent view
+     * @param view     the current view - in this case, the spinner class
      * @param position the position/ index of the selected item in spinner
-     * @param id the id of the associated spinner
+     * @param id       the id of the associated spinner
      */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -89,6 +91,7 @@ public class OrderingDonutsActivity extends AppCompatActivity implements Adapter
 
     /**
      * This method is to handle when nothing is selected in the spinner
+     *
      * @param parent the parent view
      */
     @Override
